@@ -1,0 +1,29 @@
+﻿@page
+@model FUNewsManagementSystem.WebApp.Pages.SystemAccountModel
+@{
+    ViewData["Title"] = "Danh sách tài khoản hệ thống";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên tài khoản</th>
+            <th>Email</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var acc in Model.Accounts)
+        {
+            <tr>
+                <td>@acc.AccountId</td>
+                <td>@acc.AccountName</td>
+                <td>@acc.AccountEmail</td>
+                <td>@acc.AccountRole</td>
+            </tr>
+        }
+    </tbody>
+</table>
