@@ -172,3 +172,16 @@ D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystemASS2\bin\Debug\ne
 D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystemASS2\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystemASS2\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystemASS2\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystemASS2\obj\Debug\net8.0\FUNewsManagementSystem.WebApp.sourcelink.json
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystemASS2\bin\Debug\net8.0\publish\web.config
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystemASS2\bin\Debug\net8.0\publish\appsettings.Development.json
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystemASS2\bin\Debug\net8.0\publish\appsettings.json
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystemASS2\bin\Debug\net8.0\publish\FUNewsManagementSystem.WebApp.deps.json
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystemASS2\bin\Debug\net8.0\publish\FUNewsManagementSystem.WebApp.runtimeconfig.json
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystemASS2\bin\Debug\net8.0\publish\FUNewsManagementSystem.WebApp.staticwebassets.endpoints.json
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystemASS2\bin\Debug\net8.0\publish\publish\appsettings.Development.json
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystemASS2\bin\Debug\net8.0\publish\publish\appsettings.json
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystemASS2\bin\Debug\net8.0\publish\publish\FUNewsManagementSystem.WebApp.deps.json
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystemASS2\bin\Debug\net8.0\publish\publish\FUNewsManagementSystem.WebApp.runtimeconfig.json
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystemASS2\bin\Debug\net8.0\publish\publish\FUNewsManagementSystem.WebApp.staticwebassets.endpoints.json
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystemASS2\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

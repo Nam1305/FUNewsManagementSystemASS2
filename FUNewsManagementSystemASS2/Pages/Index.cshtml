@@ -4,7 +4,42 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h3 class="mb-4 fw-bold text-primary">Tin mới nhất</h3>
+
+<div class="row g-4">
+    @if (Model.ActiveNews != null && Model.ActiveNews.Any())
+    {
+        foreach (var item in Model.ActiveNews)
+        {
+            <div class="col-md-4 col-sm-6">
+                <div class="card news-card h-100 shadow-sm border-0">
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.8CwgjQwdB7OVmQB5i0VTKQHaE7?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3"
+                         alt="Thumbnail"
+                         class="card-img-top"
+                         style="height:180px;object-fit:cover;border-radius:10px 10px 0 0;" />
+
+                    <div class="card-body">
+                        <h5 class="fw-bold">
+                            <a asp-page="/News/Detail" asp-route-id="@item.NewsArticleId"
+                               class="text-decoration-none text-dark">
+                                @item.NewsTitle
+                            </a>
+                        </h5>
+
+                        <p class="text-muted small">@item.Headline</p>
+
+                        <div class="text-secondary small">
+                            <div><strong>Nguồn:</strong> @item.NewsSource</div>
+                            <div><strong>Tạo:</strong> @item.CreatedDate?.ToString("dd/MM/yyyy")</div>
+                            <div><strong>Sửa:</strong> @item.ModifiedDate?.ToString("dd/MM/yyyy")</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p>Hiện chưa có bài viết nào được kích hoạt.</p>
+    }
 </div>

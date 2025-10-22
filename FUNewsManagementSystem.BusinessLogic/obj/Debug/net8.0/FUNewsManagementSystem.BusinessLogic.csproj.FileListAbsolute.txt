@@ -13,3 +13,4 @@ D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\ob
 D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\obj\Debug\net8.0\refint\FUNewsManagementSystem.BusinessLogic.dll
 D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\obj\Debug\net8.0\FUNewsManagementSystem.BusinessLogic.pdb
 D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\obj\Debug\net8.0\ref\FUNewsManagementSystem.BusinessLogic.dll
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\obj\Debug\net8.0\FUNewsManagementSystem.BusinessLogic.sourcelink.json

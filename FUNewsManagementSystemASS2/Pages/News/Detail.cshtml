@@ -1,0 +1,75 @@
+﻿@page "{id:int}"
+@model FUNewsManagementSystem.WebApp.Pages.News.DetailModel
+@{
+    ViewData["Title"] = Model.News?.NewsTitle;
+}
+
+<div class="container my-4">
+    <div class="row">
+        <!-- 🔹 Cột trái: Nội dung bài viết -->
+        <div class="col-lg-8">
+            <h2 class="fw-bold text-primary">@Model.News?.NewsTitle</h2>
+            <p class="text-muted">@Model.News?.Headline</p>
+
+            <div class="mb-2 small text-secondary">
+                <span><strong>Danh mục:</strong> @Model.News?.Category?.CategoryName</span> |
+                <span><strong>Tác giả:</strong> @Model.News?.CreatedBy?.AccountName</span> |
+                <span><strong>Ngày đăng:</strong> @Model.News?.CreatedDate?.ToString("dd/MM/yyyy")</span>
+            </div>
+
+            <hr />
+
+            <div class="mt-3" style="white-space: pre-line; line-height: 1.7;">
+                @Html.Raw(Model.News?.NewsContent)
+            </div>
+
+            <hr class="my-4" />
+
+            <div>
+                <strong>Tag:</strong>
+                @if (Model.News?.Tags != null && Model.News.Tags.Any())
+                {
+                    foreach (var tag in Model.News.Tags)
+                    {
+                        <span class="badge bg-info text-dark me-1">#@tag.TagName</span>
+                    }
+                }
+                else
+                {
+                    <span class="text-muted">Không có tag</span>
+                }
+            </div>
+
+            <div class="mt-4">
+                <a asp-page="/Index" class="btn btn-outline-primary">⬅️ Quay lại trang chủ</a>
+            </div>
+        </div>
+
+        <!-- 🔹 Cột phải: Gợi ý bài viết liên quan -->
+        <div class="col-lg-4">
+            <h5 class="fw-bold mb-3 text-primary">Bài viết liên quan</h5>
+            @if (Model.RelatedArticles != null && Model.RelatedArticles.Any())
+            {
+                foreach (var r in Model.RelatedArticles)
+                {
+                    <div class="card mb-3 shadow-sm border-0">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.8CwgjQwdB7OVmQB5i0VTKQHaE7?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3"
+                             alt="Thumb" class="card-img-top"
+                             style="height:140px;object-fit:cover;border-radius:10px 10px 0 0;" />
+                        <div class="card-body">
+                            <h6 class="fw-bold">
+                                <a asp-page="/News/Detail" asp-route-id="@r.NewsArticleId"
+                                   class="text-decoration-none text-dark">@r.NewsTitle</a>
+                            </h6>
+                            <p class="text-muted small">@r.Headline</p>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="text-muted">Không có bài viết liên quan.</p>
+            }
+        </div>
+    </div>
+</div>

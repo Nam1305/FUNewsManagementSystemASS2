@@ -1,0 +1,16 @@
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\bin\Release\net8.0\FUNewsManagementSystem.BusinessLogic.deps.json
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\bin\Release\net8.0\FUNewsManagementSystem.BusinessLogic.dll
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\bin\Release\net8.0\FUNewsManagementSystem.BusinessLogic.pdb
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\bin\Release\net8.0\FUNewsManagementSystem.DataAccess.dll
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\bin\Release\net8.0\FUNewsManagementSystem.DataAccess.pdb
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\obj\Release\net8.0\FUNewsManagementSystem.BusinessLogic.csproj.AssemblyReference.cache
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\obj\Release\net8.0\FUNewsManagementSystem.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\obj\Release\net8.0\FUNewsManagementSystem.BusinessLogic.AssemblyInfoInputs.cache
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\obj\Release\net8.0\FUNewsManagementSystem.BusinessLogic.AssemblyInfo.cs
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\obj\Release\net8.0\FUNewsManagementSystem.BusinessLogic.csproj.CoreCompileInputs.cache
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\obj\Release\net8.0\FUNewsManagementSystem.BusinessLogic.sourcelink.json
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\obj\Release\net8.0\FUNewsMa.EC518D48.Up2Date
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\obj\Release\net8.0\FUNewsManagementSystem.BusinessLogic.dll
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\obj\Release\net8.0\refint\FUNewsManagementSystem.BusinessLogic.dll
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\obj\Release\net8.0\FUNewsManagementSystem.BusinessLogic.pdb
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.BusinessLogic\obj\Release\net8.0\ref\FUNewsManagementSystem.BusinessLogic.dll

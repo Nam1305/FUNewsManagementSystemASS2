@@ -16,7 +16,7 @@ namespace FUNewsManagementSystem.WebApp.Pages
 
         public IList<SystemAccount> Accounts { get; set; } = new List<SystemAccount>();
 
-       public async Task OnGetAsync()
+        public async Task OnGetAsync()
         {
             Accounts = await _dbContext.SystemAccounts.AsNoTracking().ToListAsync();
         }

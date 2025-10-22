@@ -1,0 +1,15 @@
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.DataAccess\bin\Release\net8.0\FUNewsManagementSystem.DataAccess.deps.json
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.DataAccess\bin\Release\net8.0\FUNewsManagementSystem.DataAccess.runtimeconfig.json
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.DataAccess\bin\Release\net8.0\FUNewsManagementSystem.DataAccess.dll
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.DataAccess\bin\Release\net8.0\FUNewsManagementSystem.DataAccess.pdb
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.DataAccess\obj\Release\net8.0\FUNewsManagementSystem.DataAccess.csproj.AssemblyReference.cache
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.DataAccess\obj\Release\net8.0\FUNewsManagementSystem.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.DataAccess\obj\Release\net8.0\FUNewsManagementSystem.DataAccess.AssemblyInfoInputs.cache
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.DataAccess\obj\Release\net8.0\FUNewsManagementSystem.DataAccess.AssemblyInfo.cs
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.DataAccess\obj\Release\net8.0\FUNewsManagementSystem.DataAccess.csproj.CoreCompileInputs.cache
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.DataAccess\obj\Release\net8.0\FUNewsManagementSystem.DataAccess.sourcelink.json
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.DataAccess\obj\Release\net8.0\FUNewsManagementSystem.DataAccess.dll
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.DataAccess\obj\Release\net8.0\refint\FUNewsManagementSystem.DataAccess.dll
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.DataAccess\obj\Release\net8.0\FUNewsManagementSystem.DataAccess.pdb
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.DataAccess\obj\Release\net8.0\FUNewsManagementSystem.DataAccess.genruntimeconfig.cache
+D:\Work Space\FUNewsManagementSystemASS2\FUNewsManagementSystem.DataAccess\obj\Release\net8.0\ref\FUNewsManagementSystem.DataAccess.dll
