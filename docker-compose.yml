@@ -1,0 +1,70 @@
+services:
+  # =========================
+  # SQL SERVER CONTAINER
+  # =========================
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql-funews
+    environment:
+      SA_PASSWORD: "YourStrong@Password"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "127.0.0.1:1433:1433"
+    networks:
+      - backend-net
+    volumes:
+      - mssql-data:/var/opt/mssql
+
+  # =========================
+  # APP CONTAINERS (3 NODES)
+  # =========================
+  web1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: funews-web1
+    networks:
+      - backend-net
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Server=mssql-funews,1433;Database=FUNewsManagement;User Id=sa;Password=YourStrong@Password;TrustServerCertificate=True
+    ports:
+      - "127.0.0.1:5101:8080"
+    depends_on:
+      - mssql
+
+  web2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: funews-web2
+    networks:
+      - backend-net
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Server=mssql-funews,1433;Database=FUNewsManagement;User Id=sa;Password=YourStrong@Password;TrustServerCertificate=True
+    ports:
+      - "127.0.0.1:5102:8080"
+    depends_on:
+      - mssql
+
+  web3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: funews-web3
+    networks:
+      - backend-net
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Server=mssql-funews,1433;Database=FUNewsManagement;User Id=sa;Password=YourStrong@Password;TrustServerCertificate=True
+    ports:
+      - "127.0.0.1:5103:8080"
+    depends_on:
+      - mssql
+
+networks:
+  backend-net:
+
+volumes:
+  mssql-data:

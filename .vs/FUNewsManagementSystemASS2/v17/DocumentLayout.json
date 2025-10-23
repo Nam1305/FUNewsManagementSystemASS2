@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Work Space\\FUNewsManagementSystemASS2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{785B55D9-1557-439A-BDA8-C8C822B4131E}|FUNewsManagementSystem.DataAccess\\FUNewsManagementSystem.DataAccess.csproj|d:\\work space\\funewsmanagementsystemass2\\funewsmanagementsystem.dataaccess\\repositories\\newsarticlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{785B55D9-1557-439A-BDA8-C8C822B4131E}|FUNewsManagementSystem.DataAccess\\FUNewsManagementSystem.DataAccess.csproj|solutionrelative:funewsmanagementsystem.dataaccess\\repositories\\newsarticlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73333CD5-17BD-48A6-B0ED-B12E7A5B69C8}|FUNewsManagementSystemASS2\\FUNewsManagementSystem.WebApp.csproj|d:\\work space\\funewsmanagementsystemass2\\funewsmanagementsystemass2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{73333CD5-17BD-48A6-B0ED-B12E7A5B69C8}|FUNewsManagementSystemASS2\\FUNewsManagementSystem.WebApp.csproj|solutionrelative:funewsmanagementsystemass2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{73333CD5-17BD-48A6-B0ED-B12E7A5B69C8}|FUNewsManagementSystemASS2\\FUNewsManagementSystem.WebApp.csproj|d:\\work space\\funewsmanagementsystemass2\\funewsmanagementsystemass2\\pages\\systemaccount.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73333CD5-17BD-48A6-B0ED-B12E7A5B69C8}|FUNewsManagementSystemASS2\\FUNewsManagementSystem.WebApp.csproj|solutionrelative:funewsmanagementsystemass2\\pages\\systemaccount.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -46,11 +54,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Work Space\\FUNewsManagementSystemASS2\\FUNewsManagementSystemASS2\\Program.cs",
               "RelativeDocumentMoniker": "FUNewsManagementSystemASS2\\Program.cs",
@@ -63,7 +71,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NewsArticleRepository.cs",
+              "DocumentMoniker": "D:\\Work Space\\FUNewsManagementSystemASS2\\FUNewsManagementSystem.DataAccess\\Repositories\\NewsArticleRepository.cs",
+              "RelativeDocumentMoniker": "FUNewsManagementSystem.DataAccess\\Repositories\\NewsArticleRepository.cs",
+              "ToolTip": "D:\\Work Space\\FUNewsManagementSystemASS2\\FUNewsManagementSystem.DataAccess\\Repositories\\NewsArticleRepository.cs",
+              "RelativeToolTip": "FUNewsManagementSystem.DataAccess\\Repositories\\NewsArticleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T17:34:40.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Work Space\\FUNewsManagementSystemASS2\\FUNewsManagementSystemASS2\\appsettings.json",
+              "RelativeDocumentMoniker": "FUNewsManagementSystemASS2\\appsettings.json",
+              "ToolTip": "D:\\Work Space\\FUNewsManagementSystemASS2\\FUNewsManagementSystemASS2\\appsettings.json",
+              "RelativeToolTip": "FUNewsManagementSystemASS2\\appsettings.json",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-23T17:10:36.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SystemAccount.cshtml",
               "DocumentMoniker": "D:\\Work Space\\FUNewsManagementSystemASS2\\FUNewsManagementSystemASS2\\Pages\\SystemAccount.cshtml",
               "RelativeDocumentMoniker": "FUNewsManagementSystemASS2\\Pages\\SystemAccount.cshtml",
@@ -75,20 +109,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "SystemAccount.cshtml.cs",
               "DocumentMoniker": "D:\\Work Space\\FUNewsManagementSystemASS2\\FUNewsManagementSystemASS2\\Pages\\SystemAccount.cshtml.cs",
               "RelativeDocumentMoniker": "FUNewsManagementSystemASS2\\Pages\\SystemAccount.cshtml.cs",
               "ToolTip": "D:\\Work Space\\FUNewsManagementSystemASS2\\FUNewsManagementSystemASS2\\Pages\\SystemAccount.cshtml.cs",
               "RelativeToolTip": "FUNewsManagementSystemASS2\\Pages\\SystemAccount.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-23T06:43:04.744Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "AccountRepository.cs",
               "DocumentMoniker": "D:\\Work Space\\FUNewsManagementSystemASS2\\FUNewsManagementSystem.DataAccess\\Repositories\\AccountRepository.cs",
               "RelativeDocumentMoniker": "FUNewsManagementSystem.DataAccess\\Repositories\\AccountRepository.cs",
@@ -100,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "IAccountRepository.cs",
               "DocumentMoniker": "D:\\Work Space\\FUNewsManagementSystemASS2\\FUNewsManagementSystem.DataAccess\\Repositories\\IAccountRepository.cs",
               "RelativeDocumentMoniker": "FUNewsManagementSystem.DataAccess\\Repositories\\IAccountRepository.cs",
@@ -112,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "AccountService.cs",
               "DocumentMoniker": "D:\\Work Space\\FUNewsManagementSystemASS2\\FUNewsManagementSystem.BusinessLogic\\Service\\AccountService.cs",
               "RelativeDocumentMoniker": "FUNewsManagementSystem.BusinessLogic\\Service\\AccountService.cs",
@@ -124,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Detail.cshtml",
               "DocumentMoniker": "D:\\Work Space\\FUNewsManagementSystemASS2\\FUNewsManagementSystemASS2\\Pages\\News\\Detail.cshtml",
               "RelativeDocumentMoniker": "FUNewsManagementSystemASS2\\Pages\\News\\Detail.cshtml",
@@ -136,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Detail.cshtml.cs",
               "DocumentMoniker": "D:\\Work Space\\FUNewsManagementSystemASS2\\FUNewsManagementSystemASS2\\Pages\\News\\Detail.cshtml.cs",
               "RelativeDocumentMoniker": "FUNewsManagementSystemASS2\\Pages\\News\\Detail.cshtml.cs",
@@ -148,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "CommentService.cs",
               "DocumentMoniker": "D:\\Work Space\\FUNewsManagementSystemASS2\\FUNewsManagementSystem.BusinessLogic\\Service\\CommentService.cs",
               "RelativeDocumentMoniker": "FUNewsManagementSystem.BusinessLogic\\Service\\CommentService.cs",
