@@ -25,5 +25,41 @@ namespace FUNewsManagementSystem.BusinessLogic.Service
             return _accountRepository.GetByEmailAndPassword(email, password);
         }
 
+        public IEnumerable<SystemAccount> GetAll(string? keyword = null, int? role = null)
+            => _accountRepository.GetAll(keyword, role);
+
+        public SystemAccount? GetById(int id)
+            => _accountRepository.GetById(id);
+
+        public string Add(SystemAccount account)
+        {
+            if (_accountRepository.EmailExists(account.AccountEmail))
+                return "Email đã tồn tại!";
+
+            _accountRepository.Add(account);
+            _accountRepository.Save();
+            return "Success";
+        }
+
+        public string Update(SystemAccount account)
+        {
+            if (_accountRepository.EmailExists(account.AccountEmail, account.AccountId))
+                return "Email đã tồn tại!";
+
+            _accountRepository.Update(account);
+            _accountRepository.Save();
+            return "Success";
+        }
+
+        public string Delete(int id)
+        {
+            if (_accountRepository.HasCreatedArticles(id))
+                return "Không thể xóa tài khoản đã tạo bài viết!";
+
+            _accountRepository.Delete(id);
+            _accountRepository.Save();
+            return "Success";
+        }
+
     }
 }

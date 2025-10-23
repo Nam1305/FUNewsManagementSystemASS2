@@ -39,7 +39,34 @@
                     <span class="text-muted">Không có tag</span>
                 }
             </div>
+            <!-- 🔹 Khu vực bình luận -->
+            <h5 class="fw-bold text-primary mt-5">Bình luận</h5>
 
+            <form method="post" asp-page-handler="AddComment" asp-route-id="@Model.News?.NewsArticleId">
+                <div class="mb-3">
+                    <textarea asp-for="NewCommentContent" class="form-control" rows="3"
+                              placeholder="Nhập bình luận của bạn..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Gửi bình luận</button>
+            </form>
+
+            <div class="mt-4">
+                @if (Model.Comments != null && Model.Comments.Any())
+                {
+                    foreach (var c in Model.Comments)
+                    {
+                        <div class="border-bottom mb-3 pb-2">
+                            <strong>@(c.Account?.AccountName ?? "Người dùng ẩn danh")</strong>
+                            <span class="text-muted small">(@c.CreatedAt)</span>
+                            <p class="mt-1">@c.Content</p>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p class="text-muted">Chưa có bình luận nào.</p>
+                }
+            </div>
             <div class="mt-4">
                 <a asp-page="/Index" class="btn btn-outline-primary">⬅️ Quay lại trang chủ</a>
             </div>

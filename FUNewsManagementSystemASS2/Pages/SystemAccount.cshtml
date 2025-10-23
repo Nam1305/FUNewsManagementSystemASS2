@@ -4,26 +4,154 @@
     ViewData["Title"] = "Danh sách tài khoản hệ thống";
 }
 
-<h2>@ViewData["Title"]</h2>
+@Html.AntiForgeryToken()
 
-<table class="table table-striped">
-    <thead>
+<h3 class="fw-bold text-primary mb-3">Quản lý tài khoản</h3>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info">@TempData["Message"]</div>
+}
+
+<form method="get" class="row g-2 mb-4">
+    <div class="col-md-4">
+        <input type="text" name="Keyword" value="@Model.Keyword" class="form-control" placeholder="Tìm kiếm theo tên hoặc email..." />
+    </div>
+    <div class="col-md-3">
+        <select name="Role" class="form-select">
+            <option value="">-- Tất cả vai trò --</option>
+            <option value="0" selected="@(Model.Role == 0)">Admin</option>
+            <option value="1" selected="@(Model.Role == 1)">Staff</option>
+            <option value="2" selected="@(Model.Role == 2)">Lecturer</option>
+        </select>
+    </div>
+    <div class="col-md-2">
+        <button id="btnSearch" class="btn btn-primary flex-fill">Lọc</button>
+        <button id="btnReset" class="btn btn-outline-secondary flex-fill">Bỏ lọc</button>
+    </div>
+</form>
+
+<table class="table table-hover align-middle">
+    <thead class="table-primary">
         <tr>
             <th>ID</th>
-            <th>Tên tài khoản</th>
+            <th>Tên</th>
             <th>Email</th>
-            <th>Role</th>
+            <th>Vai trò</th>
+            <th>Hành động</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var acc in Model.Accounts)
+        @if (Model.Accounts != null && Model.Accounts.Any())
+        {
+            foreach (var acc in Model.Accounts)
+            {
+                <tr>
+                    <td>@acc.AccountId</td>
+                    <td>@acc.AccountName</td>
+                    <td>@acc.AccountEmail</td>
+                    <td>
+                        @{
+                            var roleName = acc.AccountRole switch
+                            {
+                                0 => "Admin",
+                                1 => "Staff",
+                                2 => "Lecturer",
+                                _ => "Unknown"
+                            };
+                        }
+                        @roleName
+                    </td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@acc.AccountId" class="btn btn-sm btn-warning">Sửa</a>
+                        <button type="button"
+                                class="btn btn-sm btn-danger btnDelete"
+                                data-id="@acc.AccountId">
+                            Xóa
+                        </button>
+                    </td>
+                </tr>
+            }
+        }
+        else
         {
             <tr>
-                <td>@acc.AccountId</td>
-                <td>@acc.AccountName</td>
-                <td>@acc.AccountEmail</td>
-                <td>@acc.AccountRole</td>
+                <td colspan="5" class="text-center text-muted">Không có tài khoản nào</td>
             </tr>
         }
     </tbody>
 </table>
+
+<div class="mt-4">
+    <a asp-page="./Create" class="btn btn-success">+ Thêm tài khoản mới</a>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+
+    <script>
+        $(function () {
+
+                    $(".btnDelete").click(function () {
+            const id = $(this).data("id");
+            const token = $('input[name="__RequestVerificationToken"]').val(); // lấy token
+
+            if (confirm("Bạn chắc chắn muốn xóa tài khoản này?")) {
+                $.ajax({
+                    url: '@Url.Page("/SystemAccount")' + `?handler=Delete&id=${id}`,
+                    type: 'POST',
+                    headers: {
+                        "RequestVerificationToken": token // gửi kèm token
+                    },
+                    success: function (res) {
+                        if (res.success) {
+                            alert("Xóa thành công!");
+                            location.reload();
+                        } else {
+                            alert(res.message || "Không thể xóa tài khoản này!");
+                        }
+                    },
+                    error: function (xhr) {
+                        alert("Lỗi: " + xhr.status + " " + xhr.statusText);
+                    }
+                });
+            }
+        });
+
+
+            // 🔍 Nút Lọc (Search)
+            $("#btnSearch").click(function () {
+                const keyword = $("input[name='Keyword']").val();
+                const role = $("select[name='Role']").val();
+
+                const url = '@Url.Page("/SystemAccount")' + `?Keyword=${encodeURIComponent(keyword)}&Role=${encodeURIComponent(role)}`;
+                window.location.href = url;
+            });
+
+            // ♻️ Nút Bỏ lọc (Reset)
+            $("#btnReset").click(function (e) {
+                e.preventDefault();
+                $("input[name='Keyword']").val('');
+                $("select[name='Role']").val('');
+                window.location.href = '@Url.Page("/SystemAccount")';
+            });
+        });
+
+        // ✅ SignalR (đặt ngoài jQuery ready)
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/notificationHub")
+            .build();
+
+        connection.on("ReceiveNotification", function (message) {
+            alert(message);
+        });
+
+        connection.on("ForceLogout", function () {
+            alert("Tài khoản của bạn đã bị xóa hoặc vô hiệu hóa. Hệ thống sẽ đăng xuất.");
+            window.location.href = "/Login";
+        });
+
+        connection.start().catch(err => console.error(err));
+    </script>
+}

@@ -1,6 +1,62 @@
 ﻿@using Microsoft.AspNetCore.Http
 @inject IHttpContextAccessor HttpContextAccessor
 
+@{
+    var accountName = Context.Session.GetString("UserName");
+    var userId = Context.Session.GetInt32("UserId");
+    var role = Context.Session.GetInt32("Role");
+}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+<script>
+    window.toastr.options = {
+        closeButton: true,
+        progressBar: true,
+        timeOut: 3000,
+        positionClass: "toast-bottom-right"
+    };
+</script>
+@if (!string.IsNullOrEmpty(accountName))
+{
+    <script type="module">
+        import { getConnection } from '/js/signalr-connection.js';
+
+        const userRole = '@role';
+        const userId = '@userId';
+
+        (async () => {
+            const connection = await getConnection(userRole);
+            console.log(`✅ Connected as role ${userRole}`);
+
+            // Join group theo role (nếu có trong hub)
+            await connection.invoke("JoinGroup", userRole);
+            console.log(`📡 Joined group: ${userRole}`);
+
+            // Lưu connection toàn cục
+            window.globalHubConnection = connection;
+            document.dispatchEvent(new Event("signalrReady"));
+
+            // 🟢 Khi admin xóa user -> logout
+            connection.on("AccountDeleted", (deletedId) => {
+                console.log("Received AccountDeleted:", deletedId);
+                if (deletedId == userId) {
+                    console.log('hehe', deletedId);
+                    window.location.href = "/Logout"
+
+                }
+            });
+
+            // 🟢 Nhận thông báo realtime chung
+            connection.on("ReceiveNotification", (msg) => {
+                toastr.info(msg, "Thông báo hệ thống", { timeOut: 4000 });
+            });
+        })();
+    </script>
+}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,3 +136,5 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+
