@@ -1,3 +1,5 @@
+version: "3.9"
+
 services:
   # =========================
   # SQL SERVER CONTAINER
@@ -9,14 +11,19 @@ services:
       SA_PASSWORD: "YourStrong@Password"
       ACCEPT_EULA: "Y"
     ports:
-      - "127.0.0.1:1433:1433"
+      - "127.0.0.1:1444:1433"               # expose port cho local test
     networks:
       - backend-net
     volumes:
       - mssql-data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "pidof sqlservr > /dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
 
   # =========================
-  # APP CONTAINERS (3 NODES)
+  # WEB APP CONTAINER 1
   # =========================
   web1:
     build:
@@ -26,13 +33,18 @@ services:
     networks:
       - backend-net
     environment:
+      - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:8080
       - ConnectionStrings__SQLServerConnection=Server=mssql-funews,1433;Database=FUNewsManagement;User Id=sa;Password=YourStrong@Password;TrustServerCertificate=True
     ports:
       - "127.0.0.1:5101:8080"
     depends_on:
-      - mssql
+      mssql:
+        condition: service_healthy
 
+  # =========================
+  # WEB APP CONTAINER 2
+  # =========================
   web2:
     build:
       context: .
@@ -41,13 +53,18 @@ services:
     networks:
       - backend-net
     environment:
+      - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:8080
       - ConnectionStrings__SQLServerConnection=Server=mssql-funews,1433;Database=FUNewsManagement;User Id=sa;Password=YourStrong@Password;TrustServerCertificate=True
     ports:
       - "127.0.0.1:5102:8080"
     depends_on:
-      - mssql
+      mssql:
+        condition: service_healthy
 
+  # =========================
+  # WEB APP CONTAINER 3
+  # =========================
   web3:
     build:
       context: .
@@ -56,15 +73,21 @@ services:
     networks:
       - backend-net
     environment:
+      - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:8080
       - ConnectionStrings__SQLServerConnection=Server=mssql-funews,1433;Database=FUNewsManagement;User Id=sa;Password=YourStrong@Password;TrustServerCertificate=True
     ports:
       - "127.0.0.1:5103:8080"
     depends_on:
-      - mssql
+      mssql:
+        condition: service_healthy
 
+# =========================
+# NETWORK & VOLUME
+# =========================
 networks:
   backend-net:
 
 volumes:
   mssql-data:
+
