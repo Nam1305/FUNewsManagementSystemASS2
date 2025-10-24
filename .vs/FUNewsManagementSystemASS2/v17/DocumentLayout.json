@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Work Space\\FUNewsManagementSystemASS2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{785B55D9-1557-439A-BDA8-C8C822B4131E}|FUNewsManagementSystem.DataAccess\\FUNewsManagementSystem.DataAccess.csproj|d:\\work space\\funewsmanagementsystemass2\\funewsmanagementsystem.dataaccess\\repositories\\newsarticlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{785B55D9-1557-439A-BDA8-C8C822B4131E}|FUNewsManagementSystem.DataAccess\\FUNewsManagementSystem.DataAccess.csproj|solutionrelative:funewsmanagementsystem.dataaccess\\repositories\\newsarticlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{73333CD5-17BD-48A6-B0ED-B12E7A5B69C8}|FUNewsManagementSystemASS2\\FUNewsManagementSystem.WebApp.csproj|d:\\work space\\funewsmanagementsystemass2\\funewsmanagementsystemass2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{73333CD5-17BD-48A6-B0ED-B12E7A5B69C8}|FUNewsManagementSystemASS2\\FUNewsManagementSystem.WebApp.csproj|solutionrelative:funewsmanagementsystemass2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{785B55D9-1557-439A-BDA8-C8C822B4131E}|FUNewsManagementSystem.DataAccess\\FUNewsManagementSystem.DataAccess.csproj|d:\\work space\\funewsmanagementsystemass2\\funewsmanagementsystem.dataaccess\\repositories\\newsarticlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{785B55D9-1557-439A-BDA8-C8C822B4131E}|FUNewsManagementSystem.DataAccess\\FUNewsManagementSystem.DataAccess.csproj|solutionrelative:funewsmanagementsystem.dataaccess\\repositories\\newsarticlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{73333CD5-17BD-48A6-B0ED-B12E7A5B69C8}|FUNewsManagementSystemASS2\\FUNewsManagementSystem.WebApp.csproj|d:\\work space\\funewsmanagementsystemass2\\funewsmanagementsystemass2\\pages\\systemaccount.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -71,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "NewsArticleRepository.cs",
               "DocumentMoniker": "D:\\Work Space\\FUNewsManagementSystemASS2\\FUNewsManagementSystem.DataAccess\\Repositories\\NewsArticleRepository.cs",
               "RelativeDocumentMoniker": "FUNewsManagementSystem.DataAccess\\Repositories\\NewsArticleRepository.cs",
@@ -84,13 +84,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Work Space\\FUNewsManagementSystemASS2\\FUNewsManagementSystemASS2\\appsettings.json",
               "RelativeDocumentMoniker": "FUNewsManagementSystemASS2\\appsettings.json",
               "ToolTip": "D:\\Work Space\\FUNewsManagementSystemASS2\\FUNewsManagementSystemASS2\\appsettings.json",
               "RelativeToolTip": "FUNewsManagementSystemASS2\\appsettings.json",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAwwAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-10-23T17:10:36.091Z",
               "EditorCaption": ""
@@ -117,8 +117,7 @@
               "RelativeToolTip": "FUNewsManagementSystemASS2\\Pages\\SystemAccount.cshtml.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T06:43:04.744Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T06:43:04.744Z"
             },
             {
               "$type": "Document",

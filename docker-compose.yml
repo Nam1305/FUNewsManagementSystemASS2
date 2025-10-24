@@ -27,7 +27,7 @@ services:
       - backend-net
     environment:
       - ASPNETCORE_URLS=http://+:8080
-      - ConnectionStrings__DefaultConnection=Server=mssql-funews,1433;Database=FUNewsManagement;User Id=sa;Password=YourStrong@Password;TrustServerCertificate=True
+      - ConnectionStrings__SQLServerConnection=Server=mssql-funews,1433;Database=FUNewsManagement;User Id=sa;Password=YourStrong@Password;TrustServerCertificate=True
     ports:
       - "127.0.0.1:5101:8080"
     depends_on:
@@ -42,7 +42,7 @@ services:
       - backend-net
     environment:
       - ASPNETCORE_URLS=http://+:8080
-      - ConnectionStrings__DefaultConnection=Server=mssql-funews,1433;Database=FUNewsManagement;User Id=sa;Password=YourStrong@Password;TrustServerCertificate=True
+      - ConnectionStrings__SQLServerConnection=Server=mssql-funews,1433;Database=FUNewsManagement;User Id=sa;Password=YourStrong@Password;TrustServerCertificate=True
     ports:
       - "127.0.0.1:5102:8080"
     depends_on:
@@ -57,7 +57,7 @@ services:
       - backend-net
     environment:
       - ASPNETCORE_URLS=http://+:8080
-      - ConnectionStrings__DefaultConnection=Server=mssql-funews,1433;Database=FUNewsManagement;User Id=sa;Password=YourStrong@Password;TrustServerCertificate=True
+      - ConnectionStrings__SQLServerConnection=Server=mssql-funews,1433;Database=FUNewsManagement;User Id=sa;Password=YourStrong@Password;TrustServerCertificate=True
     ports:
       - "127.0.0.1:5103:8080"
     depends_on:
